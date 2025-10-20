@@ -547,12 +547,12 @@ rhel9cis_tmp_svc: false
 # Setting to `true` will allow a test on the package and force the import of the key
 rhel9cis_force_gpg_key_import: true
 
-## Control 1.2.1.3
+## Control 1.2.1.3 (Level 2)
 # When installing RHEL from authorized Red Hat source, RHEL will come with default YUM repository. NOT having a default YUM
 # repo ('rhel9cis_rhel_default_repo' set as 'false'), in conjunction with 'rhel9cis_rule_enable_repogpg' set as 'True', will enable the tasks
 # which check the GPG signatures for all the individual YUM repositories.
 rhel9cis_rhel_default_repo: true
-## Control 1.2.1.3
+## Control 1.2.1.3 (Level 2)
 # When 'rhel9cis_rule_enable_repogpg' is set to 'true'(in conjunction with 'rhel9cis_rhel_default_repo':'false'), conditions are met for
 # enabling the GPG signatures-check for all the individual YUM repositories. If GPG signatures-check is enabled on repositories which do not
 # support it(like RedHat), installation of packages will fail.
@@ -657,7 +657,7 @@ rhel9cis_chrony_server_options: "minpoll 8"
 # This variable, if set to 'true'(default), will inform the kernel the system clock is kept synchronized
 # and the kernel will update the real-time clock every 11 minutes. Otherwise, if 'rtcsync' option is
 # disabled, chronyd will not be in sync(kernel discipline is disabled, 11 minutes mode will be off).
-rhel9cis_chrony_server_rtcsync: false
+rhel9cis_chrony_server_rtcsync: true
 # This variable configures the values to be used by chronyd to gradually correct any time offset,
 # by slowing down/speeding up the clock. An example of this directive usage would be:
 # 'makestep 1000 10'.
