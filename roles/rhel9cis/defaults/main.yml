@@ -935,7 +935,7 @@ rhel9cis_ssh_maxstartups: '10:30:60'
 ## Control 5.1.18 - Ensure sshd MaxSessions is configured
 # This variable value specifies the maximum number of open sessions that are permitted from
 # a given location. CIS recommends it to be 10 or less.
-rhel9cis_ssh_maxsessions: 4
+rhel9cis_ssh_maxsessions: 10
 
 ## Control 5.2.x - Ensure sudo log file exists
 # By default, sudo logs through syslog(3). However, to specify a custom log file, the
